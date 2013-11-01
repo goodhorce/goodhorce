@@ -1,6 +1,3 @@
-// Copyright 2010 The Walk Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
 
 package main
 
@@ -67,6 +64,14 @@ type MyMainWindow struct {
 }
 
 func (mw *MyMainWindow) initialize() error {
+    pos, num = 0, 1
+    getfiles()
+    pos = 1
+    mw.imageView.openImage()
+    return nil
+}
+
+func (mw *MyMainWindow) continue() error {
     pos, num = 0, 1
     getfiles()
     pos = 1
